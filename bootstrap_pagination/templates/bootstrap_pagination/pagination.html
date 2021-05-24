@@ -8,7 +8,9 @@
       </li>
     {% else %}
       <li class="page-item">
-        <a class="page-link" aria-label="{% trans 'First Page' %}" title="{% trans  'First Page' %}" href="{{ first_page_url|default:"#"|escape }}"><span aria-hidden="true">{{first_label}}</span></a>
+        <span>
+        <a class="page-link" aria-label="{% trans 'First Page' %}" title="{% trans  'First Page' %}" href="{{ first_page_url|default:"#"|escape }}">{{first_label}}</a>
+        </span>
       </li>
     {% endif %}
 {% endif %}
@@ -19,7 +21,9 @@
       </li>
     {% else %}
       <li class="page-item">
-        <a class="page-link" aria-label="{% trans 'Previous Page' %}" title="{% trans 'Previous Page' %}" href="{{ previous_page_url|default:"#"|escape }}"><span aria-hidden="true">{{ previous_label }}</span></a>
+        <span>
+        <a class="page-link" aria-label="{% trans 'Previous Page' %}" title="{% trans 'Previous Page' %}" href="{{ previous_page_url|default:"#"|escape }}">{{ previous_label }}</a>
+        </span>
       </li>
     {% endif %}
 {% endif %}
@@ -30,7 +34,9 @@
         </li>
     {% else %}
         <li class="page-item">
+          <span>
           <a class="page-link" aria-label="{% trans 'Page' %} {{ pagenum }} {% trans 'of' %} {{ page.paginator.num_pages }}" title="{% trans 'Page' %} {{ pagenum }} {% trans 'of' %} {{ page.paginator.num_pages }}" href="{{ url|escape }}">{% if show_index_range %} {{ index_range }} {% else %} {{ pagenum }} {% endif %}</a>
+          </span>
         </li>
     {% endif %}
 {% endfor %}
@@ -41,7 +47,9 @@
       </li>
     {% else %}
       <li class="page-item">
-        <a class="page-link"  aria-label="{% trans 'Next Page' %}" title="{% trans 'Next Page' %}" href="{{ next_page_url|default:"#"|escape }}"><span aria-hidden="true">{{ next_label }}</span></a>
+        <span>
+        <a class="page-link"  aria-label="{% trans 'Next Page' %}" title="{% trans 'Next Page' %}" href="{{ next_page_url|default:"#"|escape }}">{{ next_label }}</a>
+        </span>
       </li>
     {% endif %}
 {% endif %}
@@ -52,7 +60,9 @@
       </li>
     {% else %}
       <li class="page-item">
-        <a class="page-link" aria-label="{% trans 'Last Page' %}" title="{% trans 'Last Page' %}" href="{{ last_page_url|default:"#"|escape }}"><span aria-hidden="true">{{last_label}}</span></a>
+        <span>
+        <a class="page-link" aria-label="{% trans 'Last Page' %}" title="{% trans 'Last Page' %}" href="{{ last_page_url|default:"#"|escape }}">{{last_label}}</a>
+        </span>
       </li>
     {% endif %}
 {% endif %}
